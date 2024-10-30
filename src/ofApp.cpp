@@ -2,6 +2,7 @@
 
 
 
+
 //--------------------------------------------------------------
 void ofApp::setup(){
 
@@ -9,10 +10,15 @@ void ofApp::setup(){
 	ofApp::y = 384;
 	ofApp::radius;
 
-	sound.load("Leon.mp3");
-	sound.setVolume(1.0f);
-	sound.play();
-	sound.setLoop(true);
+	music.load("Leon.mp3");
+	music.setVolume(1.0f);
+	music.play();
+	music.setLoop(true);
+
+	imageblur.allocate(ofGetWidth(), ofGetHeight(), OF_IMAGE_COLOR);
+
+	blur.set("blurry", 0, 0, 2);
+	blurRadius.set("radius", 60, 0, 100);
 
 	// Removes insides
 	ofNoFill();
@@ -25,6 +31,7 @@ void ofApp::setup(){
 
 //--------------------------------------------------------------
 void ofApp::update(){
+
 
 
 	if (x >= ofGetWidth() - radius) {
@@ -50,16 +57,6 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw(){
 
-	if (sound.isLoaded())
-	{
-		cout << "loaded";
-	}
-
-	if (sound.isPlaying())
-	{
-		cout << "playing";
-	}
-
 	// If not set, defaults to a thickness of 1.
 	ofSetLineWidth(5);
 
@@ -69,6 +66,7 @@ void ofApp::draw(){
 	
 	// RGB and Alpha is the last value
 	// Alpha value also caps out at 255
+	
 	//ofSetColor(255, 0, 0, 100);
 	
 	// Draws circle 

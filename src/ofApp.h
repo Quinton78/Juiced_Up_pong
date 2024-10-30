@@ -3,6 +3,7 @@
 #include "ofMain.h"
 #include "ofxCv.h"
 #include "ofxGui.h"
+#include "ofxCvImage.h"
 
 
 class ofApp : public ofBaseApp{
@@ -23,6 +24,7 @@ class ofApp : public ofBaseApp{
 		void windowResized(int w, int h);
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
+		
 
 		ofxPanel gui;
 
@@ -30,9 +32,9 @@ class ofApp : public ofBaseApp{
 
 		ofParameter<int> blur;
 
-		ofParameter<int> bob;
+		ofParameter<int> blurRadius;
 
-		ofSoundPlayer sound;
+		ofSoundPlayer music;
 
 		int x;
 		int y;
