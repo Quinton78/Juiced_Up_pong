@@ -32,16 +32,7 @@ class ofApp : public ofBaseApp{
 
 		ofParameter<int> bob;
 
-		ofParameter<float> volume;
-		ofParameter<float> decay;
-
 		ofSoundPlayer sound;
-
-		float *fft;
-
-		float *soundSpectrum;
-
-		int bands;
 
 		int x;
 		int y;

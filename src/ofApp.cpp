@@ -9,21 +9,10 @@ void ofApp::setup(){
 	ofApp::y = 384;
 	ofApp::radius;
 
-	sound.load("resident-evil-2-save-room.wav");
+	sound.load("Leon.mp3");
+	sound.setVolume(1.0f);
 	sound.play();
 	sound.setLoop(true);
-
-	gui.setup();
-	gui.add(volume.set("volume", 0.5, 0.0, 0.1));
-	gui.add(decay.set("decay", 0.5, 0.0, 1.0));
-
-	fft = new float[128];
-
-	for (int i = 0; i < 128; i++) {
-		fft[i] = 0;
-	}
-
-	bands = 64;
 
 	// Removes insides
 	ofNoFill();
@@ -31,29 +20,12 @@ void ofApp::setup(){
 	// Sets background to black
 	ofBackground(0);
 
-	//kinect.init();
-	//kinect.open();
-
-	//imageblur.allocate(kinect.getWidth(), kinect.getHeight(), OF_IMAGE_COLOR);
-
 
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
 
-	ofSoundUpdate();
-
-	sound.setVolume(volume);
-
-	soundSpectrum = ofSoundGetSpectrum(bands);
-
-	for (int i = 0; i < bands; i++) {
-		fft[i] *= decay;
-		if (fft[i] < soundSpectrum[i]) {
-			fft[i] = soundSpectrum[i];
-		}
-	}
 
 	if (x >= ofGetWidth() - radius) {
 		xdir = -1;
@@ -78,6 +50,16 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw(){
 
+	if (sound.isLoaded())
+	{
+		cout << "loaded";
+	}
+
+	if (sound.isPlaying())
+	{
+		cout << "playing";
+	}
+
 	// If not set, defaults to a thickness of 1.
 	ofSetLineWidth(5);
 
@@ -92,7 +74,7 @@ void ofApp::draw(){
 	// Draws circle 
 	ofDrawCircle(x, y, radius);
 
-	// Spawns ball in the center of the screen
+	// Spawns ball in the center of the screen*/
 }
 
 //--------------------------------------------------------------
