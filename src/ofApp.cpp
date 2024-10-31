@@ -15,10 +15,13 @@ void ofApp::setup(){
 	music.play();
 	music.setLoop(true);
 
-	imageblur.allocate(ofGetWidth(), ofGetHeight(), OF_IMAGE_COLOR);
+	shader.load("shaderBlurX.vert", "shaderBlurX.frag");
+	shader.load("shaderBlurY.vert", "shaderBlurY.frag");
 
-	blur.set("blurry", 0, 0, 2);
-	blurRadius.set("radius", 60, 0, 100);
+	ofSetColor(255);
+	shader.begin();
+	ofDrawRectangle(0, 0, ofGetWidth(), ofGetHeight());
+	shader.end();
 
 	// Removes insides
 	ofNoFill();

@@ -28,11 +28,7 @@ class ofApp : public ofBaseApp{
 
 		ofxPanel gui;
 
-		ofImage imageblur;
-
-		ofParameter<int> blur;
-
-		ofParameter<int> blurRadius;
+		ofShader shader;
 
 		ofSoundPlayer music;
 
