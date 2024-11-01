@@ -18,10 +18,6 @@ void ofApp::setup(){
 	shader.load("shaderBlurX.vert", "shaderBlurX.frag");
 	shader.load("shaderBlurY.vert", "shaderBlurY.frag");
 
-	ofSetColor(255);
-	shader.begin();
-	ofDrawRectangle(0, 0, ofGetWidth(), ofGetHeight());
-	shader.end();
 
 	// Removes insides
 	ofNoFill();
@@ -60,6 +56,12 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw(){
 
+	ofSetColor(255);
+	shader.begin();
+	// Draws circle 
+	ofDrawCircle(x, y, radius);
+	shader.end();
+
 	// If not set, defaults to a thickness of 1.
 	ofSetLineWidth(5);
 
@@ -72,8 +74,6 @@ void ofApp::draw(){
 	
 	//ofSetColor(255, 0, 0, 100);
 	
-	// Draws circle 
-	ofDrawCircle(x, y, radius);
 
 	// Spawns ball in the center of the screen*/
 }
