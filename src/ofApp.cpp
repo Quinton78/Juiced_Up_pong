@@ -20,7 +20,7 @@ void ofApp::setup(){
 	music.play();
 	music.setLoop(true);
 
-	shader.load("shaderBlurX");
+	//shader.load("shaderBlurX");
 
 
 	// Removes insides

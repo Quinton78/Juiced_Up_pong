@@ -26,10 +26,11 @@ class ofApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
 		
 
+		// For future UI elements like the buttons
 		//ofxPanel gui;
 
 		// Shader variable
-		ofShader shader;
+		//ofShader shader;
 
 		// Audio variable for music
 		ofSoundPlayer music;
