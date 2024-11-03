@@ -10,6 +10,10 @@ void ofApp::setup(){
 	ofApp::x = 512;
 	ofApp::y = 384;
 	ofApp::radius;
+	ofApp::addScore_1;
+	ofApp::currentScore_1;
+	ofApp::addScore_2;
+	ofApp::currentScore_2;
 
 	music.load("Leon.mp3");
 	music.setVolume(1.0f);
@@ -39,12 +43,15 @@ void ofApp::update(){
 		// Increase score count for P2 here
 		// This is detecting the left side of the screen 
 		xdir = -1;
+		// In theory this should work but doesn't
+		currentScore_2 = addScore_2 + currentScore_2;
 	}
 
 	if (x <= radius) {
 		// Increase score count for P1 here
 		// This is detecting the right side of the screen
 		xdir = 1;
+		currentScore_1 = addScore_1 + currentScore_1;
 	}
 
 	if (y >= ofGetHeight() - radius) {
@@ -62,10 +69,9 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw(){
 
-	shader.begin();
-	// Draws circle 
-	ofDrawCircle(x, y, radius);
-	shader.end();
+	/*shader.begin();
+	
+	shader.end();*/
 
 	// If not set, defaults to a thickness of 1.
 	ofSetLineWidth(5);
@@ -74,12 +80,15 @@ void ofApp::draw(){
 	ofDrawLine((ofGetWidth() / 2), 0, (ofGetWidth() / 2), ofGetHeight());
 
 	// Will have to create variables for score that allow it to increment up
-	ofDrawBitmapString("PLAYER 2 SCORE", 520, 25);
-	ofDrawBitmapString("PLAYER 1 SCORE", 390, 25);
+	ofDrawBitmapString(ofToString(currentScore_2), 520, 25);
+	ofDrawBitmapString(ofToString(currentScore_1), 498, 25);
 
 	// RGB and Alpha is the last value
 	// Alpha value also caps out at 255
 	//ofSetColor(255);
+	
+	// Draws circle 
+	ofDrawCircle(x, y, radius);
 }
 
 //--------------------------------------------------------------

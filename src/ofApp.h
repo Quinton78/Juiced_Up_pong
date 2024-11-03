@@ -45,5 +45,9 @@ class ofApp : public ofBaseApp{
 		int speed = 10;
 		// Determines radius of circle
 		int radius = 20;
+		int addScore_1 = 1;
+		int currentScore_1;
+		int addScore_2 = 1;
+		int currentScore_2;
 		
 };
