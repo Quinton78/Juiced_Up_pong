@@ -15,8 +15,8 @@ void ofApp::setup(){
 	music.play();
 	music.setLoop(true);
 
-	shader.load("shaderBlurX.vert", "shaderBlurX.frag");
-	shader.load("shaderBlurY.vert", "shaderBlurY.frag");
+	shader.load("shaderBlurX");
+	//shader.load("shaderBlurY.vert", "shaderBlurY.frag");
 
 
 	// Removes insides
@@ -24,6 +24,7 @@ void ofApp::setup(){
 
 	// Sets background to black
 	ofBackground(0);
+
 
 
 }
