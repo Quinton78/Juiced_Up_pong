@@ -64,13 +64,22 @@ void ofApp::update(){
 
 	x += xdir * speed;
 	y += ydir * speed;
+
+	// Closes program when score reaches 11
+	// Note that a pop up will appear when this code runs
+	// Just clock ignore and you can close it normally
+	if (currentScore_1 == 11) {
+		terminate();
+	}
+	if (currentScore_2 == 11) {
+		terminate();
+	}
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
 
 	/*shader.begin();
-	
 	shader.end();*/
 
 	// If not set, defaults to a thickness of 1.
@@ -89,6 +98,7 @@ void ofApp::draw(){
 	
 	// Draws circle 
 	ofDrawCircle(x, y, radius);
+	
 }
 
 //--------------------------------------------------------------
