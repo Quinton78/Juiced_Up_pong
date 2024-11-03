@@ -6,6 +6,7 @@
 //--------------------------------------------------------------
 void ofApp::setup(){
 
+	// Setting these variables these number spawns ball in the center of the screen
 	ofApp::x = 512;
 	ofApp::y = 384;
 	ofApp::radius;
@@ -61,7 +62,6 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw(){
 
-	//ofSetColor(255);
 	shader.begin();
 	// Draws circle 
 	ofDrawCircle(x, y, radius);
@@ -73,12 +73,13 @@ void ofApp::draw(){
 	// Sets dividing line in the center of the screen
 	ofDrawLine((ofGetWidth() / 2), 0, (ofGetWidth() / 2), ofGetHeight());
 
-	
+	// Will have to create variables for score that allow it to increment up
+	ofDrawBitmapString("PLAYER 2 SCORE", 520, 25);
+	ofDrawBitmapString("PLAYER 1 SCORE", 390, 25);
+
 	// RGB and Alpha is the last value
 	// Alpha value also caps out at 255
-	
-
-	// Spawns ball in the center of the screen*/
+	//ofSetColor(255);
 }
 
 //--------------------------------------------------------------
