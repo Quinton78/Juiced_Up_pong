@@ -103,352 +103,325 @@
 		<ClCompile Include="..\..\..\addons\ofxGui\src\ofxToggle.cpp">
 			<Filter>addons\ofxGui\src</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\addons\ofxShader-master\src\ofxShader.cpp">
-			<Filter>addons\ofxShader-master\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\addons\ofxShader-master\src\ofxShaderFilter.cpp">
-			<Filter>addons\ofxShader-master\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\addons\ofxShader-master\src\ofxShaderMaterial.cpp">
-			<Filter>addons\ofxShader-master\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\addons\ofxShader-master\src\ofxTextureCube.cpp">
-			<Filter>addons\ofxShader-master\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\addons\ofxShader-master\src\skylight\ArHosekSkyModel.c">
-			<Filter>addons\ofxShader-master\src\skylight</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\addons\ofxShader-master\src\skylight\README.txt">
-			<Filter>addons\ofxShader-master\src\skylight</Filter>
-		</ClCompile>
 	</ItemGroup>
 	<ItemGroup>
 		<Filter Include="src">
 			<UniqueIdentifier>{d8376475-7454-4a24-b08a-aac121d3ad6f}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons">
-			<UniqueIdentifier>{6677807D--AE0-F-4F-8A-B-CD0-F0F7F3E9CD60}</UniqueIdentifier>
+			<UniqueIdentifier>{3EF9AA26--DD3-B-4C-50-A-F6E-DF4C0B6DBCA9}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv">
-			<UniqueIdentifier>{B5C834F1--1BC-C-42-AC-8-CE0-9D27DA4F2044}</UniqueIdentifier>
+			<UniqueIdentifier>{33315C96--AF0-9-4F-EB-8-636-354EE065A82F}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\src">
-			<UniqueIdentifier>{19565613--B7A-F-49-64-9-445-76E8EDFE5568}</UniqueIdentifier>
+			<UniqueIdentifier>{983AC371--E0F-8-48-A5-9-AF6-BC98802EEA2D}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs">
-			<UniqueIdentifier>{940CD966--F53-B-4E-68-8-1D4-9BA9C2BEBAFA}</UniqueIdentifier>
+			<UniqueIdentifier>{CE1C52FF--03F-B-4F-3B-8-976-7E98311366F1}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\ippicv">
-			<UniqueIdentifier>{93AB6D04--356-B-4F-ED-B-97F-3AEFB87E75E4}</UniqueIdentifier>
+			<UniqueIdentifier>{9D10D93A--99F-D-42-BD-8-CC9-F916CCB6E339}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\ippicv\include">
-			<UniqueIdentifier>{D9408BF1--6DB-E-45-29-A-9F5-4AF3291BFDD8}</UniqueIdentifier>
+			<UniqueIdentifier>{DB34F916--790-6-4E-C2-9-9FA-CF3B34E025B6}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv">
-			<UniqueIdentifier>{1A74D853--310-7-4D-3E-B-929-A9A9108A6875}</UniqueIdentifier>
+			<UniqueIdentifier>{7D943F35--B00-7-48-18-9-5E2-71FADECDCD92}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include">
-			<UniqueIdentifier>{E2D6BAEE--C66-1-44-E2-8-5E1-ABC3611200C2}</UniqueIdentifier>
+			<UniqueIdentifier>{EC6CB3A0--E84-2-4E-FE-B-2AA-3AF170ED9901}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv2">
-			<UniqueIdentifier>{19A45017--5A2-A-43-F5-8-4A2-84764ED004CC}</UniqueIdentifier>
+			<UniqueIdentifier>{975FEB70--14B-E-4D-FC-B-632-AC518F642EDA}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv2\calib3d">
-			<UniqueIdentifier>{67BBBE5F--A2C-0-40-C6-8-341-260CAFC16B4B}</UniqueIdentifier>
+			<UniqueIdentifier>{935E8C13--40D-4-47-B0-B-3AE-CB71F2670AFE}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv2\core">
-			<UniqueIdentifier>{DB865AA8--6A7-4-41-53-8-412-0276978E8776}</UniqueIdentifier>
+			<UniqueIdentifier>{6C9D2195--1EE-B-4A-46-9-649-C17A41961533}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda">
-			<UniqueIdentifier>{C1635E78--FB5-6-44-E7-B-069-41B37E4DDC92}</UniqueIdentifier>
+			<UniqueIdentifier>{58914BAF--BD6-D-4A-BD-A-18C-018CD7DE2E6F}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda\detail">
-			<UniqueIdentifier>{622A0FCE--14C-8-4C-62-A-1AA-3A3F85E306C5}</UniqueIdentifier>
+			<UniqueIdentifier>{CF1B03AB--D73-5-43-7E-B-A9B-5BD1707C066D}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv2\core\detail">
-			<UniqueIdentifier>{49A8CF63--F9D-F-40-68-B-DB3-7B1A539EEBDB}</UniqueIdentifier>
+			<UniqueIdentifier>{D5F0438E--79E-5-4D-A5-8-390-DAE2EB8C5959}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv2\core\hal">
-			<UniqueIdentifier>{5ECDA211--692-6-4D-36-9-1AD-58E0C4BB8639}</UniqueIdentifier>
+			<UniqueIdentifier>{AD74F40F--512-7-40-F2-B-7C9-AD5067401598}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv2\core\llapi">
-			<UniqueIdentifier>{D3C0CC3F--7E3-E-45-91-A-D66-1F49045205F9}</UniqueIdentifier>
+			<UniqueIdentifier>{87154BF3--F96-1-42-97-B-702-8CC61450EFF0}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv2\core\opencl">
-			<UniqueIdentifier>{A2963DD3--1F1-F-42-36-8-B28-EFC63683C607}</UniqueIdentifier>
+			<UniqueIdentifier>{D2167FB9--260-A-4A-F1-A-CF2-EACB407099BF}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv2\core\opencl\runtime">
-			<UniqueIdentifier>{ABEF6769--66E-D-4D-11-9-212-6F709752874A}</UniqueIdentifier>
+			<UniqueIdentifier>{1A2E5776--4D9-7-48-ED-8-882-D6D15CBFA5F5}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv2\core\opencl\runtime\autogenerated">
-			<UniqueIdentifier>{60A36D90--821-9-45-DC-B-642-3F2E38F69C20}</UniqueIdentifier>
+			<UniqueIdentifier>{ED206F15--1C0-3-4F-19-8-BB5-A08CAD6D29F1}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv2\core\openvx">
-			<UniqueIdentifier>{9556EFCF--2E1-0-41-34-B-DA4-9B36AF3C3D44}</UniqueIdentifier>
+			<UniqueIdentifier>{5B5500AE--A7F-2-42-F8-A-212-5645E677CE3B}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv2\core\parallel">
-			<UniqueIdentifier>{EB33BF02--2E5-E-4D-24-9-32F-242470E9B34D}</UniqueIdentifier>
+			<UniqueIdentifier>{0B11F421--79B-9-4A-CF-A-A74-F247E96CCAD2}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv2\core\parallel\backend">
-			<UniqueIdentifier>{C794AA85--97D-E-4C-3C-9-E63-A99926F66601}</UniqueIdentifier>
+			<UniqueIdentifier>{FF0EEC80--226-B-43-36-B-970-BB4B4B0155C3}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv2\core\private">
-			<UniqueIdentifier>{5EB5B914--B81-3-46-37-9-3FE-369541859FCD}</UniqueIdentifier>
+			<UniqueIdentifier>{D9B6F377--A1D-E-43-D2-B-D52-0E616E25DB3D}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv2\core\utils">
-			<UniqueIdentifier>{A1E69B02--26F-4-4C-90-8-FDB-5D823AEFABDD}</UniqueIdentifier>
+			<UniqueIdentifier>{446353CE--815-2-42-D9-9-998-3D046DA8B3E7}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv2\dnn">
-			<UniqueIdentifier>{D44A34C6--CDC-7-41-4F-A-014-E9307A8D6F12}</UniqueIdentifier>
+			<UniqueIdentifier>{44D802CC--54F-E-4F-B1-8-2B6-0B1D39F33C59}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv2\dnn\utils">
-			<UniqueIdentifier>{4F3C1A48--61E-3-4F-BE-A-868-B01FE7284C6B}</UniqueIdentifier>
+			<UniqueIdentifier>{AFB8331D--DEF-B-40-22-B-D4D-CD78E97F7EA9}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv2\features2d">
-			<UniqueIdentifier>{F183A56E--B43-4-41-B3-8-A54-0457F4412D29}</UniqueIdentifier>
+			<UniqueIdentifier>{C26F553F--C4F-1-46-4F-9-BF2-84DB2FDA8121}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv2\features2d\hal">
-			<UniqueIdentifier>{51B8CEBA--C3C-D-45-A8-A-FD7-FCF925CA69B1}</UniqueIdentifier>
+			<UniqueIdentifier>{18F10271--A5A-8-42-57-B-225-DE804961C812}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv2\flann">
-			<UniqueIdentifier>{C35347E3--2C4-9-4C-32-B-0D3-0E247E9E3BBE}</UniqueIdentifier>
+			<UniqueIdentifier>{A76B19E0--2A2-5-4E-F8-9-9BE-135EDA720DDC}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv2\gapi">
-			<UniqueIdentifier>{4D6AC0F0--D25-A-40-C5-8-350-713B6200F3D6}</UniqueIdentifier>
+			<UniqueIdentifier>{C579AD0A--5E7-9-4F-C3-A-F8B-A7605FAED050}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\cpu">
-			<UniqueIdentifier>{FBBC9906--CD6-6-41-A1-A-2A4-3F7D661525A6}</UniqueIdentifier>
+			<UniqueIdentifier>{887D85A4--A7E-4-42-73-8-43E-52914D8D855A}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\fluid">
-			<UniqueIdentifier>{A559A202--E5E-E-4F-24-A-A38-55F86F764A02}</UniqueIdentifier>
+			<UniqueIdentifier>{DD83A787--54C-B-4E-2D-8-674-536E741A5644}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\gpu">
-			<UniqueIdentifier>{775C86B5--3F0-F-41-F1-B-C56-931D7D4454DE}</UniqueIdentifier>
+			<UniqueIdentifier>{2217CE87--2F2-A-44-02-9-9B9-E6CEE12CD1B6}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\infer">
-			<UniqueIdentifier>{A3012B67--BB9-2-48-CF-9-2A4-3FE1811E22C1}</UniqueIdentifier>
+			<UniqueIdentifier>{8B59351F--5D0-F-4A-03-A-8A1-A3AC691B5D3A}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\oak">
-			<UniqueIdentifier>{95ADD5F5--D42-4-45-DD-9-5A7-DD7D533CB270}</UniqueIdentifier>
+			<UniqueIdentifier>{8D28068B--89B-A-4A-13-B-165-279AD5F99E08}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\ocl">
-			<UniqueIdentifier>{D65D0E97--265-2-49-39-B-B01-907938756FAB}</UniqueIdentifier>
+			<UniqueIdentifier>{38B3354D--7E6-5-41-6E-A-72A-F27B8BC23CBD}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\own">
-			<UniqueIdentifier>{9DC29BD1--6AC-C-47-85-B-2C6-FB353C840341}</UniqueIdentifier>
+			<UniqueIdentifier>{309937C0--4A8-F-46-26-A-255-0CCC9ED8F895}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\plaidml">
-			<UniqueIdentifier>{331087A1--302-9-46-07-B-E3A-D2912F6E5892}</UniqueIdentifier>
+			<UniqueIdentifier>{FA01E0A6--EA1-A-47-FA-B-7BC-349B1B963DB6}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\python">
-			<UniqueIdentifier>{242D8C4E--273-4-43-FF-B-AD9-B25BD8D328EA}</UniqueIdentifier>
+			<UniqueIdentifier>{D47C3160--CC8-7-4E-4E-9-1B3-CD303DDE7020}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\render">
-			<UniqueIdentifier>{DE77485A--7C7-4-47-36-8-B14-597395EF801D}</UniqueIdentifier>
+			<UniqueIdentifier>{76B53685--CF0-8-42-EE-A-191-637FEB1823D9}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\s11n">
-			<UniqueIdentifier>{661187D2--21D-F-41-D1-A-884-A1CC2AF85D91}</UniqueIdentifier>
+			<UniqueIdentifier>{7619F89F--7C8-D-4B-01-B-C5E-C4E019E28649}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\streaming">
-			<UniqueIdentifier>{D0371BB5--44A-0-45-7F-A-9F4-C42DB223E168}</UniqueIdentifier>
+			<UniqueIdentifier>{FECF1285--D1F-8-4D-0C-9-3E2-4DF0ECC4DE47}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\streaming\gstreamer">
-			<UniqueIdentifier>{863C62F9--5DF-F-4A-BA-8-653-AA511DC593D7}</UniqueIdentifier>
+			<UniqueIdentifier>{96DB67AF--18F-5-4C-38-8-0B7-9127FD1CA265}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\streaming\onevpl">
-			<UniqueIdentifier>{3EEA0F3F--760-F-45-CB-8-593-C3896D702B4F}</UniqueIdentifier>
+			<UniqueIdentifier>{1E2901D2--8EB-D-4D-EC-8-4B3-078C8015FC09}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\util">
-			<UniqueIdentifier>{345E39B2--EF1-4-43-EF-B-CAE-52DB8B058D4B}</UniqueIdentifier>
+			<UniqueIdentifier>{9D022F0A--9D3-8-45-44-A-386-33794F86AB19}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv2\highgui">
-			<UniqueIdentifier>{B5E73ACF--443-3-40-84-B-A50-C9EC42503ADB}</UniqueIdentifier>
+			<UniqueIdentifier>{C354A864--ECD-9-4D-E0-A-2EA-A82AE33FFA3F}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv2\imgcodecs">
-			<UniqueIdentifier>{E638D5E1--AE1-2-44-E5-8-818-4BDE01C5E16E}</UniqueIdentifier>
+			<UniqueIdentifier>{E63346F2--FA4-6-4B-CB-8-EA5-CFA3BA1E6C8B}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv2\imgcodecs\legacy">
-			<UniqueIdentifier>{72DEB030--3DF-3-47-36-9-EFD-CF0AEEF65D7B}</UniqueIdentifier>
+			<UniqueIdentifier>{8D3A5A29--261-9-44-09-B-619-2D4D22303C14}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv2\imgproc">
-			<UniqueIdentifier>{51370C81--020-C-40-C6-8-CF7-1AF2304CD277}</UniqueIdentifier>
+			<UniqueIdentifier>{B73872E0--0F7-7-48-35-A-D2B-3EB4B775B604}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv2\imgproc\detail">
-			<UniqueIdentifier>{F16C0E9A--23D-1-40-F5-8-37F-F7AC1A6470B6}</UniqueIdentifier>
+			<UniqueIdentifier>{73CBA8D0--EE1-9-44-F8-8-927-BA166B86DC7C}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv2\imgproc\hal">
-			<UniqueIdentifier>{3C0D32CD--DB9-5-4F-29-9-A87-673B05FED49E}</UniqueIdentifier>
+			<UniqueIdentifier>{BB619638--6DD-6-4F-77-A-F18-6F5BFEE534DE}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv2\ml">
-			<UniqueIdentifier>{6E165CD4--395-7-42-E0-A-A22-32E60CCF7BF3}</UniqueIdentifier>
+			<UniqueIdentifier>{BA46274A--A04-E-45-89-8-A4B-EB8A8184DA42}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv2\objdetect">
-			<UniqueIdentifier>{52808A92--19C-3-4B-0E-A-7DE-F2FDC9F885BF}</UniqueIdentifier>
+			<UniqueIdentifier>{079209D3--538-C-47-6E-B-CFA-33D7308758F9}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv2\photo">
-			<UniqueIdentifier>{3A1365AE--0CA-6-43-94-8-AA3-C0DC290BB1FC}</UniqueIdentifier>
+			<UniqueIdentifier>{58250E92--702-6-4D-53-B-F92-829F7F88B8D4}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv2\photo\legacy">
-			<UniqueIdentifier>{5A4B0B4C--A62-C-42-C7-A-72A-86A872BFB97A}</UniqueIdentifier>
+			<UniqueIdentifier>{3C412BEA--29C-1-44-22-9-BF3-9D662B0DD762}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv2\stitching">
-			<UniqueIdentifier>{F8B78723--C55-D-4E-37-B-AC4-DAD2FF03C20D}</UniqueIdentifier>
+			<UniqueIdentifier>{DF84CC62--1CA-3-42-FC-B-A26-CC8CFA266F30}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv2\stitching\detail">
-			<UniqueIdentifier>{EB71B2AF--057-B-49-E3-B-D2F-9A4482470760}</UniqueIdentifier>
+			<UniqueIdentifier>{5686CBB9--929-0-41-51-8-966-FCD26B0EDF4E}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv2\ts">
-			<UniqueIdentifier>{FECCE1CE--61F-0-46-DB-9-6FC-19496B591782}</UniqueIdentifier>
+			<UniqueIdentifier>{B4DB68AB--9A5-2-41-7C-A-BE4-28F7A188BF64}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv2\video">
-			<UniqueIdentifier>{762FF1C1--7E7-5-4E-9E-9-A8F-F62D4FAAA65D}</UniqueIdentifier>
+			<UniqueIdentifier>{482F55D8--796-A-40-2D-9-B30-727332D3DB4F}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv2\video\detail">
-			<UniqueIdentifier>{800214E8--5B7-6-45-4B-B-BFF-CDCDFA60E92A}</UniqueIdentifier>
+			<UniqueIdentifier>{D825862B--9D5-E-48-BA-9-F18-CAAFC8B47C2C}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv2\video\legacy">
-			<UniqueIdentifier>{0C036DBB--0CF-6-48-B1-A-AA8-8781E1EACA5F}</UniqueIdentifier>
+			<UniqueIdentifier>{0533C73F--6E2-B-48-0F-B-B7C-80119AB97BE9}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv2\videoio">
-			<UniqueIdentifier>{5D36166A--5BA-E-4F-EC-B-FE9-06082CA33EE2}</UniqueIdentifier>
+			<UniqueIdentifier>{563707CF--BCF-C-48-6E-8-080-8820B3C2BCFC}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv2\videoio\doc">
-			<UniqueIdentifier>{0B0CA971--AA2-E-47-29-B-AEB-C9A6245FD92B}</UniqueIdentifier>
+			<UniqueIdentifier>{D689A237--5EC-C-48-33-9-487-329BF72C55F2}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv2\videoio\legacy">
-			<UniqueIdentifier>{8005A400--2E0-7-40-8F-B-25A-77CA72D9E4A9}</UniqueIdentifier>
+			<UniqueIdentifier>{E8073264--C8E-F-41-74-B-1C3-E9CD47514AD0}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv4">
-			<UniqueIdentifier>{61332557--777-2-4A-48-8-40D-29BFCAF7B5B0}</UniqueIdentifier>
+			<UniqueIdentifier>{CF0C80D8--AEB-A-44-0D-8-DD7-3298743DC86F}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv4\opencv2">
-			<UniqueIdentifier>{8FFD499F--4CE-2-4B-2C-B-8A2-46ADCB43B3DD}</UniqueIdentifier>
+			<UniqueIdentifier>{EAC72233--801-6-47-13-8-881-80541CBC2EFC}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv4\opencv2\calib3d">
-			<UniqueIdentifier>{EFAE71D0--321-7-43-42-9-E7F-A6CD44D33FB6}</UniqueIdentifier>
+			<UniqueIdentifier>{EEE3E63D--81E-C-40-E0-B-991-27A01D627F0D}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv4\opencv2\core">
-			<UniqueIdentifier>{278080ED--868-1-48-2E-9-480-8724810A0DB5}</UniqueIdentifier>
+			<UniqueIdentifier>{2ED11B0F--900-7-43-23-A-47A-84CB8A948618}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv4\opencv2\core\cuda">
-			<UniqueIdentifier>{4DB63846--884-D-4B-C5-9-4CF-9F66C3411E34}</UniqueIdentifier>
+			<UniqueIdentifier>{F3A7F01F--7DD-9-4E-BD-B-F53-B9771C9C4EEE}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv4\opencv2\core\cuda\detail">
-			<UniqueIdentifier>{C6CEF238--56A-2-40-6D-B-0AD-0CEC7D490B6A}</UniqueIdentifier>
+			<UniqueIdentifier>{547B0DC2--B55-D-4E-17-B-296-0AA5B5F33ED1}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv4\opencv2\core\detail">
-			<UniqueIdentifier>{A3B8CE7B--5CA-C-4E-12-B-BE5-10D40EDB8DD4}</UniqueIdentifier>
+			<UniqueIdentifier>{53F3A697--AC9-D-47-F1-9-AF3-934D617F1886}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv4\opencv2\core\hal">
-			<UniqueIdentifier>{1E176767--6C9-2-4F-17-B-484-3F33A4A4952B}</UniqueIdentifier>
+			<UniqueIdentifier>{24649FF9--1D5-A-47-70-B-E89-DA989BAC6E33}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv4\opencv2\core\opencl">
-			<UniqueIdentifier>{F98114FA--A50-A-4C-03-A-4F8-6B2841C69F0E}</UniqueIdentifier>
+			<UniqueIdentifier>{CF40D463--36E-D-47-69-B-2AB-F04F4BFCC62C}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv4\opencv2\core\opencl\runtime">
-			<UniqueIdentifier>{336040CA--A4D-D-4E-DE-9-CEE-17DAE2B1A7B4}</UniqueIdentifier>
+			<UniqueIdentifier>{F8A2827E--606-D-47-05-A-4C5-6F44D68D0976}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv4\opencv2\core\opencl\runtime\autogenerated">
-			<UniqueIdentifier>{37E5E634--CAB-A-49-5E-B-F51-F71F9B62A48D}</UniqueIdentifier>
+			<UniqueIdentifier>{6A94A74D--56B-B-4C-D2-8-838-A330592D17C7}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv4\opencv2\core\parallel">
-			<UniqueIdentifier>{7EE1C752--B39-C-45-15-9-398-A73351326E3A}</UniqueIdentifier>
+			<UniqueIdentifier>{FFC52578--673-A-4D-28-B-29A-62E27BF6BE57}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv4\opencv2\core\parallel\backend">
-			<UniqueIdentifier>{03E74DDE--BF2-F-4D-79-8-1BC-BDE5BCC91D32}</UniqueIdentifier>
+			<UniqueIdentifier>{1A58B0C5--846-7-4C-16-B-D1A-F700AD7706C2}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv4\opencv2\core\utils">
-			<UniqueIdentifier>{82308852--9FE-9-4F-1E-B-763-FB8AEC688D4C}</UniqueIdentifier>
+			<UniqueIdentifier>{7BAE7A28--0C2-C-4C-11-B-DB8-939C54D04446}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv4\opencv2\dnn">
-			<UniqueIdentifier>{85D9EEF2--F9B-8-43-E8-9-A2C-F4016246E158}</UniqueIdentifier>
+			<UniqueIdentifier>{D56204A0--BB0-5-43-0D-B-35B-21437258CD89}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv4\opencv2\dnn\utils">
-			<UniqueIdentifier>{D257F79D--C41-B-48-B9-9-EAD-9F4BEC0CED59}</UniqueIdentifier>
+			<UniqueIdentifier>{E370E3A5--CCF-4-41-E1-9-70D-8654642D05DF}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv4\opencv2\features2d">
-			<UniqueIdentifier>{F7D8195D--46B-2-40-BB-A-565-D573AD517379}</UniqueIdentifier>
+			<UniqueIdentifier>{0A081371--C87-F-4A-52-B-0C9-56B8A3D07245}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv4\opencv2\features2d\hal">
-			<UniqueIdentifier>{5976F6F7--A06-7-40-83-9-2C7-B48600CA5202}</UniqueIdentifier>
+			<UniqueIdentifier>{547F427D--9FF-8-45-86-B-43B-E24DC5958946}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv4\opencv2\flann">
-			<UniqueIdentifier>{ECCC1D4F--367-B-43-4F-9-D9D-D3998DB6D92C}</UniqueIdentifier>
+			<UniqueIdentifier>{CF86C90C--540-6-43-96-A-027-442D252AFC69}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv4\opencv2\imgproc">
-			<UniqueIdentifier>{B817281D--AA5-6-42-BA-A-FE5-4DFC1BF36AD3}</UniqueIdentifier>
+			<UniqueIdentifier>{1365187C--FAD-3-46-AB-8-FFB-3ECA18A22EA9}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv4\opencv2\imgproc\detail">
-			<UniqueIdentifier>{B931C01C--0ED-C-47-52-8-71E-F325926FDF6A}</UniqueIdentifier>
+			<UniqueIdentifier>{09428B89--B24-3-4F-6F-A-1EB-B54C6181FCE2}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv4\opencv2\imgproc\hal">
-			<UniqueIdentifier>{C45E1559--B2C-5-47-5E-8-31C-44DBC0C2AB59}</UniqueIdentifier>
+			<UniqueIdentifier>{04803158--A37-B-40-7A-8-D9D-B888DA9298DD}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv4\opencv2\objdetect">
-			<UniqueIdentifier>{94491EDB--45C-9-4F-3E-9-49E-71E3CD328A8B}</UniqueIdentifier>
+			<UniqueIdentifier>{323952B5--DCF-4-48-FA-A-137-0EA67EBBFE31}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv4\opencv2\photo">
-			<UniqueIdentifier>{0CCBC82C--6BB-C-46-0B-A-0B2-0CC5C7C14595}</UniqueIdentifier>
+			<UniqueIdentifier>{9C518782--0F3-5-47-55-9-4D1-CE2B345BD105}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv4\opencv2\photo\legacy">
-			<UniqueIdentifier>{4374083D--D01-3-4B-9E-9-2C4-E2E8135F2406}</UniqueIdentifier>
+			<UniqueIdentifier>{2B0C82A2--FE2-6-41-92-A-742-D4A90390E404}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv4\opencv2\video">
-			<UniqueIdentifier>{5C6ACD5C--B7A-E-47-0C-A-39B-065AC180D354}</UniqueIdentifier>
+			<UniqueIdentifier>{1DFC6747--690-1-4C-1F-B-1FB-DB1D95756C37}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv4\opencv2\video\detail">
-			<UniqueIdentifier>{857B288C--ACF-6-46-29-8-765-D037EF02E535}</UniqueIdentifier>
+			<UniqueIdentifier>{E56D777C--95F-0-4F-CB-B-A95-726B8ACC6761}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxOpenCv\libs\opencv\include\opencv4\opencv2\video\legacy">
-			<UniqueIdentifier>{4C6C65C2--733-8-4B-52-B-659-F8890D4229BA}</UniqueIdentifier>
+			<UniqueIdentifier>{F78F74AF--4A9-9-4F-C5-A-46F-E90234E5601D}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxCv-master">
-			<UniqueIdentifier>{A14A788C--D2F-B-4B-24-B-3BC-11BA42D654E2}</UniqueIdentifier>
+			<UniqueIdentifier>{92948B40--E71-D-4D-7F-8-DD6-44B87266B1AF}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxCv-master\src">
-			<UniqueIdentifier>{098EF342--130-1-40-AD-B-733-003A4F7113BB}</UniqueIdentifier>
+			<UniqueIdentifier>{53B482EF--03B-9-47-33-B-2E6-3BB3554FFD2A}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxCv-master\libs">
-			<UniqueIdentifier>{8EC50B23--CAB-3-40-27-B-E18-02820EB32636}</UniqueIdentifier>
+			<UniqueIdentifier>{4D77018F--E20-D-4D-3F-B-00A-A4E6F1A64F24}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxCv-master\libs\CLD">
-			<UniqueIdentifier>{1D15CF62--2FE-8-45-B8-9-926-D787FC2A2461}</UniqueIdentifier>
+			<UniqueIdentifier>{8D009A0B--86B-5-42-39-A-E99-ED9F02ED75C1}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxCv-master\libs\CLD\include">
-			<UniqueIdentifier>{BEF4D91F--195-6-4F-65-8-1B9-D15FB2996050}</UniqueIdentifier>
+			<UniqueIdentifier>{62D249F4--9DE-8-41-3E-8-D2D-4154B881DE9A}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxCv-master\libs\CLD\include\CLD">
-			<UniqueIdentifier>{9EB918A0--8E3-3-49-2E-9-675-B92EB60D1151}</UniqueIdentifier>
+			<UniqueIdentifier>{F94D1121--E02-4-4D-A7-8-242-2A7C89762F38}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxCv-master\libs\CLD\src">
-			<UniqueIdentifier>{4049DF90--D68-A-45-B7-A-AE2-1FDF7CF401AB}</UniqueIdentifier>
+			<UniqueIdentifier>{4A46786A--F20-4-42-32-A-9AE-537C77B7C0E7}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxCv-master\libs\ofxCv">
-			<UniqueIdentifier>{3955ECAB--EA4-6-43-43-8-C54-12F8362C6C17}</UniqueIdentifier>
+			<UniqueIdentifier>{B016E8FD--B44-D-4B-E9-9-76B-D4A7588E1139}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxCv-master\libs\ofxCv\include">
-			<UniqueIdentifier>{50576892--64D-1-49-EC-A-8F6-1568ECEF6AA8}</UniqueIdentifier>
+			<UniqueIdentifier>{5347E36B--679-B-46-E0-A-1EF-6A835965FAE9}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxCv-master\libs\ofxCv\include\ofxCv">
-			<UniqueIdentifier>{C708903A--C69-8-46-35-B-FC1-7DCAF0992C1C}</UniqueIdentifier>
+			<UniqueIdentifier>{B378B97F--B44-4-45-AE-8-484-D27187E1CF42}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxCv-master\libs\ofxCv\src">
-			<UniqueIdentifier>{651C515C--0CC-8-46-35-A-BC6-E103FA0921F9}</UniqueIdentifier>
+			<UniqueIdentifier>{C3E26F3F--600-0-49-58-A-991-C20C088BD2F5}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxGui">
-			<UniqueIdentifier>{14AAEB29--604-C-48-D6-B-94D-34C0D7F6D5F6}</UniqueIdentifier>
+			<UniqueIdentifier>{4F9A4832--092-9-4D-25-A-C91-9F795A414068}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxGui\src">
-			<UniqueIdentifier>{459EB938--E8C-A-47-14-A-8C9-E2C951786030}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="addons\ofxShader-master">
-			<UniqueIdentifier>{66C4ABCB--0CC-B-4E-0F-9-10D-7CD7E62C81C8}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="addons\ofxShader-master\src">
-			<UniqueIdentifier>{0C5B0811--E52-2-48-7D-B-E31-5B56DC6D2D38}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="addons\ofxShader-master\src\skylight">
-			<UniqueIdentifier>{F56087FD--F85-5-47-49-B-73B-CDDB9B91839E}</UniqueIdentifier>
+			<UniqueIdentifier>{7C6F7EC0--E43-3-47-88-8-B04-FB89A1F37E76}</UniqueIdentifier>
 		</Filter>
 	</ItemGroup>
 	<ItemGroup>
@@ -2296,33 +2269,6 @@
 		</ClInclude>
 		<ClInclude Include="..\..\..\addons\ofxGui\src\ofxToggle.h">
 			<Filter>addons\ofxGui\src</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxShader-master\src\face.h">
-			<Filter>addons\ofxShader-master\src</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxShader-master\src\ofxShader.h">
-			<Filter>addons\ofxShader-master\src</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxShader-master\src\ofxShaderFilter.h">
-			<Filter>addons\ofxShader-master\src</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxShader-master\src\ofxShaderMaterial.h">
-			<Filter>addons\ofxShader-master\src</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxShader-master\src\ofxTextureCube.h">
-			<Filter>addons\ofxShader-master\src</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxShader-master\src\skylight\ArHosekSkyModel.h">
-			<Filter>addons\ofxShader-master\src\skylight</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxShader-master\src\skylight\ArHosekSkyModelData_CIEXYZ.h">
-			<Filter>addons\ofxShader-master\src\skylight</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxShader-master\src\skylight\ArHosekSkyModelData_RGB.h">
-			<Filter>addons\ofxShader-master\src\skylight</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxShader-master\src\skylight\ArHosekSkyModelData_Spectral.h">
-			<Filter>addons\ofxShader-master\src\skylight</Filter>
 		</ClInclude>
 	</ItemGroup>
 	<ItemGroup>

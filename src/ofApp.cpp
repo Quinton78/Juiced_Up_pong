@@ -16,7 +16,6 @@ void ofApp::setup(){
 	music.setLoop(true);
 
 	shader.load("shaderBlurX");
-	//shader.load("shaderBlurY.vert", "shaderBlurY.frag");
 
 
 	// Removes insides
@@ -33,12 +32,17 @@ void ofApp::setup(){
 void ofApp::update(){
 
 
-
+	// Currently the ball bounces when is hits the left or right side of tthe screen
+	// Since there is no player I'm keeping it this way for now aas it makes testing easier
 	if (x >= ofGetWidth() - radius) {
+		// Increase score count for P2 here
+		// This is detecting the left side of the screen 
 		xdir = -1;
 	}
 
 	if (x <= radius) {
+		// Increase score count for P1 here
+		// This is detecting the right side of the screen
 		xdir = 1;
 	}
 
@@ -57,7 +61,7 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw(){
 
-	ofSetColor(255);
+	//ofSetColor(255);
 	shader.begin();
 	// Draws circle 
 	ofDrawCircle(x, y, radius);
@@ -72,8 +76,6 @@ void ofApp::draw(){
 	
 	// RGB and Alpha is the last value
 	// Alpha value also caps out at 255
-	
-	//ofSetColor(255, 0, 0, 100);
 	
 
 	// Spawns ball in the center of the screen*/

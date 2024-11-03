@@ -26,17 +26,24 @@ class ofApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
 		
 
-		ofxPanel gui;
+		//ofxPanel gui;
 
+		// Shader variable
 		ofShader shader;
 
+		// Audio variable for music
 		ofSoundPlayer music;
+
+		// Audio variable for sound effects
+		ofSoundPlayer SFX;
 
 		int x;
 		int y;
 		int xdir = 1;
 		int ydir = 1;
+		// Speed of the circle
 		int speed = 10;
+		// Determines radius of circle
 		int radius = 20;
 		
 };
