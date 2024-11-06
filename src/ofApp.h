@@ -28,7 +28,7 @@ class ofApp : public ofBaseApp{
 
 		// For future UI elements like the buttons
 		//ofxPanel gui;
-
+		
 		// Shader variable
 		//ofShader shader;
 
@@ -43,7 +43,7 @@ class ofApp : public ofBaseApp{
 		int xdir = 1;
 		int ydir = 1;
 		// Speed of the circle
-		int speed = 10;
+		int speed = 5;
 		// Determines radius of circle
 		int radius = 20;
 		int addScore_1 = 1;
