@@ -36,6 +36,9 @@ void ofApp::setup(){
 	// Sets background to black
 	ofBackground(0);
 
+	ofRectangle Player_1(10, 10, 20, 80);
+	ofRectangle Player_2(100, 10, 20, 80);
+
 	// Randomizes it so that the initial randomization isn't always the same number
 	ofSeedRandom((new ofTime)->getAsMilliseconds());
 
@@ -143,7 +146,7 @@ void ofApp::draw(){
 	// Draws circle 
 	ofDrawCircle(x, y, radius);
 
-	ofDrawRectangle(10, 10, 20, 80);
+	//ofDrawRectangle(Player_1);
 
 	// Closes program when score reaches 11
 	// Note that a pop up will appear when this code runs
