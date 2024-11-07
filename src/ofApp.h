@@ -46,9 +46,16 @@ class ofApp : public ofBaseApp{
 		int speed = 5;
 		// Determines radius of circle
 		int radius = 20;
+
+		//  Player 1 and 2 score
 		int addScore_1 = 1;
 		int currentScore_1;
 		int addScore_2 = 1;
 		int currentScore_2;
 		
+		// Spawn positions for player 1 and 2
+		int x1 = 10;
+		int y1 = 10;
+		int x2 = 100;
+		int y2 = 10;
 };

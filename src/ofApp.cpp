@@ -16,6 +16,10 @@ void ofApp::setup(){
 	// Setting these variables these number spawns ball in the center of the screen
 	ofApp::x = 512;
 	ofApp::y = 384;
+	ofApp::x1;
+	ofApp::y1;
+	ofApp::x2;
+	ofApp::y2;
 	ofApp::radius;
 	ofApp::addScore_1;
 	ofApp::currentScore_1;
@@ -36,8 +40,8 @@ void ofApp::setup(){
 	// Sets background to black
 	ofBackground(0);
 
-	ofRectangle Player_1(10, 10, 20, 80);
-	ofRectangle Player_2(100, 10, 20, 80);
+	ofRectangle Player_1(x1, y2, 20, 80);
+	ofRectangle Player_2(x2, y2, 20, 80);
 
 	// Randomizes it so that the initial randomization isn't always the same number
 	ofSeedRandom((new ofTime)->getAsMilliseconds());
@@ -146,7 +150,8 @@ void ofApp::draw(){
 	// Draws circle 
 	ofDrawCircle(x, y, radius);
 
-	//ofDrawRectangle(Player_1);
+	ofDrawRectangle(Player_1);
+	Player_1 = ofDrawRectangle(Player_1);
 
 	// Closes program when score reaches 11
 	// Note that a pop up will appear when this code runs
@@ -172,7 +177,9 @@ void ofApp::draw(){
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
-
+	if (key == ' ') {
+		y1 = 50;
+	}
 }
 
 //--------------------------------------------------------------
