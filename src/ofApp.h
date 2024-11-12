@@ -51,7 +51,7 @@ class ofApp : public ofBaseApp{
 		int xdir = 1;
 		int ydir = 1;
 		// Speed of the circle
-		int speed = 5;
+		int speed = 2;
 		// Determines radius of circle
 		int radius = 20;
 
