@@ -62,8 +62,6 @@ class ofApp : public ofBaseApp{
 		int currentScore_2;
 		
 		// Spawn positions for player 1 and 2
-		int x1 = 10;
 		int y1 = 10;
-		int x2 = 100;
 		int y2 = 10;
 };
