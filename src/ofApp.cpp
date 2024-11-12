@@ -53,6 +53,9 @@ void ofApp::setup(){
 	xdir = ofLerp(-1, 1, glm::round(ofRandom(-1)));
 	ydir = ofLerp(-1, 1, glm::round(ofRandom(-1)));
 
+	ofAddListener(ofGetWindowPtr()->events().keyPressed, this,
+		&ofApp::keycodePressed);
+
 	State = Title;
 
 }
@@ -191,8 +194,30 @@ void ofApp::draw(){
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
-	if (key == ' ') {
+	if (key == '83') {
 		y1+=10;
+	}
+}
+
+void ofApp::keycodePressed(ofKeyEventArgs& e) {
+
+	cout << "KEY : " << e.key << endl;
+	cout << "KEYCODE : " << e.keycode << endl;
+	cout << "MODIFIERS : " << e.modifiers << endl;
+
+	if (e.keycode == 83) {
+		if (e.modifiers == 0) {
+			cout << "Plain old s\n";
+		}
+		else if (e.modifiers == OF_KEY_SHIFT) {
+			cout << "SHIFT-s\n";
+		}
+		else if (e.modifiers == OF_KEY_ALT) {
+			cout << "ALT-s\n";
+		}
+		else if (e.modifiers == OF_KEY_CONTROL) {
+			cout << "CTRL-s\n";
+		}
 	}
 }
 
