@@ -27,7 +27,15 @@ class ofApp : public ofBaseApp{
 		
 
 		// For future UI elements like the buttons
-		//ofxPanel gui;
+		ofxPanel gui;
+
+		ofxToggle toggle;
+		ofxButton button;
+		ofxLabel label;
+
+		ofxIntField intField;
+		ofxFloatField floatField;
+		ofxTextField textField;
 		
 		// Shader variable
 		//ofShader shader;

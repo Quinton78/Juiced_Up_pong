@@ -33,6 +33,14 @@ void ofApp::setup(){
 
 	//shader.load("shaderBlurX");
 
+	gui.setup();
+
+	gui.add(toggle.setup("toggle", false));
+	gui.add(button.setup("button"));
+	gui.add(label.setup("label", "THIS IS LABEL"));
+	gui.add(intField.setup("int field", 100, 0, 100));
+	gui.add(floatField.setup("float field", 100.0, 0.0, 100.0));
+	gui.add(textField.setup("text field", "text"));
 
 	// Removes insides
 	ofNoFill();
