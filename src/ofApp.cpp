@@ -33,12 +33,8 @@ void ofApp::setup(){
 
 	gui.setup();
 
-	gui.add(toggle.setup("toggle", false));
-	gui.add(button.setup("button"));
-	gui.add(label.setup("label", "THIS IS LABEL"));
-	gui.add(intField.setup("int field", 100, 0, 100));
-	gui.add(floatField.setup("float field", 100.0, 0.0, 100.0));
-	gui.add(textField.setup("text field", "text"));
+	gui.add(buttonStart.setup("Start Game"));
+	gui.add(buttonQuit.setup("Quit Game"));
 
 	// Removes insides
 	ofNoFill();
@@ -124,53 +120,57 @@ void ofApp::draw(){
 
 	// Check for title screen state
 	// Display buttons and text here
-	/*if (State == Title) {
-		ofDrawBitmapString("PONG!", 490, 384);
+	if (State == Title) {
+		ofDrawBitmapString("PONG!", ofGetWidth() / 2, 384);
 		// When buttons are pressed changes game states
-	}*/
-	/*if (State == Game) {
+		if (buttonStart) {
+			State = Game;
+		}
+		if (buttonQuit) {
+			terminate();
+		}
+		gui.draw();
+	}
+	if (State == Game) {
 		// Put everything that needs to be drawn here
-	}*/
-	// If not set, defaults to a thickness of 1.
-	ofSetLineWidth(5);
+		// If not set, defaults to a thickness of 1.
+		ofSetLineWidth(5);
 
-	// Sets dividing line in the center of the screen
-	ofDrawLine((ofGetWidth() / 2), 0, (ofGetWidth() / 2), ofGetHeight());
+		// Sets dividing line in the center of the screen
+		ofDrawLine((ofGetWidth() / 2), 0, (ofGetWidth() / 2), ofGetHeight());
 
-	// Will have to create variables for score that allow it to increment up
-	ofDrawBitmapString(ofToString(currentScore_2), ofGetWidth()/1.9, 25);
-	ofDrawBitmapString(ofToString(currentScore_1), ofGetWidth()/2.1, 25);
-	//ofDrawBitmapString(ofToString(i), 600, 100);
+		// Will have to create variables for score that allow it to increment up
+		ofDrawBitmapString(ofToString(currentScore_2), ofGetWidth() / 1.9, 25);
+		ofDrawBitmapString(ofToString(currentScore_1), ofGetWidth() / 2.1, 25);
+		//ofDrawBitmapString(ofToString(i), 600, 100);
 
-	// RGB and Alpha is the last value
-	// Alpha value also caps out at 255
-	//ofSetColor(255);
-	
-	// Draws circle 
-	ofDrawCircle(x, y, radius);
+		// Draws circle 
+		ofDrawCircle(x, y, radius);
 
-	ofRectangle Player_1;
-	Player_1.x = 10;
-	Player_1.y = y1;
-	Player_1.width = 20;
-	Player_1.height = 80;
-	ofDrawRectangle(Player_1);
+		ofRectangle Player_1;
+		Player_1.x = 10;
+		Player_1.y = y1;
+		Player_1.width = 20;
+		Player_1.height = 80;
+		ofDrawRectangle(Player_1);
 
-	ofRectangle Player_2;
-	Player_2.x = ofGetWidth()/1;
-	Player_2.y = y2;
-	Player_2.width = 20;
-	Player_2.height = 80;
-	ofDrawRectangle(Player_2);
+		ofRectangle Player_2;
+		Player_2.x = ofGetWidth() - 30;
+		Player_2.y = y2;
+		Player_2.width = 20;
+		Player_2.height = 80;
+		ofDrawRectangle(Player_2);
+	}
 
 	// Closes program when score reaches 11
 	// Note that a pop up will appear when this code runs
-	// Just clock ignore and you can close it normally
+	// Just click ignore and you can close it normally
 	if (currentScore_1 >= 11) {
 		State = End;
 		if (End == State) {
 			ofClear(0, 0, 0);
-			ofDrawBitmapString("GAME OVER", 490, 384);
+			ofDrawBitmapString("GAME OVER!", ofGetWidth() / 2.145, 384);
+			ofDrawBitmapString("Player 1 Wins!", ofGetWidth() / 2.19, 420);
 		}
 	}
 	if (currentScore_2 >= 11) {
@@ -179,7 +179,8 @@ void ofApp::draw(){
 		// Checks if game state is End
 		if (End == State) {
 			ofClear(0, 0, 0);
-			ofDrawBitmapString("GAME OVER", 490, 384);
+			ofDrawBitmapString("GAME OVER!", ofGetWidth() / 2.145, 384);
+			ofDrawBitmapString("Player 2 Wins!", ofGetWidth() / 2.19, 420);
 		}
 	}
 	
@@ -194,7 +195,7 @@ void ofApp::keycodePressed(ofKeyEventArgs& e) {
 
 	// Displays keycode of input
 	// Useful for debugging
-	cout << "KEYCODE : " << e.keycode << endl;
+	//cout << "KEYCODE : " << e.keycode << endl;
 
 	// Player 1 inputs
 	// Move down ('S')
