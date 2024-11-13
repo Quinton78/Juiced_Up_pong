@@ -75,33 +75,31 @@ void ofApp::update(){
 				// So point keep incrementing up while the game is supposed to be over
 				else if (currentScore_2 || currentScore_1 >= 11) {
 					speed = 0;
-					x = 512;
-					y = 384;
+					x = ofGetWidth()/2;
+					y = ofGetHeight()/2;
 				}
 			}
 		}
 		// Currently the ball bounces when is hits the left or right side of tthe screen
-				// Since there is no player I'm keeping it this way for now aas it makes testing easier
+		// Since there is no player I'm keeping it this way for now aas it makes testing easier
 		if (x >= ofGetWidth() - radius) {
-			// Increase score count for P2 here
-			// This is detecting the left side of the screen 
-			// In theory this should work but doesn't
-			currentScore_2 = addScore_2 + currentScore_2;
+			// Increase score count for P1 here
+			// This is detecting the right side of the screen
+			currentScore_1 = addScore_1 + currentScore_1;
 			// Resets position to the center of the screen
-			x = 512;
-			y = 384;
+			x = ofGetWidth() / 2;
+			y = ofGetHeight() / 2;
 			// Randomizes what direction the ball goes in when spawned into game world
 			xdir = ofLerp(-1, 1, glm::round(ofRandom(1)));
 			ydir = ofLerp(-1, 1, glm::round(ofRandom(1)));
 		}
 
 		if (x <= radius) {
-			// Increase score count for P1 here
-			// This is detecting the right side of the screen
-			currentScore_1 = addScore_1 + currentScore_1;
-			// resets position to the center of the screen
-			x = 512;
-			y = 384;
+			// Increase score count for P2 here
+			currentScore_2 = addScore_2 + currentScore_2;
+			// Resets position to the center of the screen
+			x = ofGetWidth()/2;
+			y = ofGetHeight()/2;
 			// Randomizes what direction the ball goes in when spawned into game world
 			xdir = ofLerp(-1, 1, glm::round(ofRandom(1)));
 			ydir = ofLerp(-1, 1, glm::round(ofRandom(1)));
@@ -116,11 +114,6 @@ void ofApp::update(){
 		if (y <= radius) {
 			ydir = 1;
 		}
-	
-
-	
-
-	
 }
 
 //--------------------------------------------------------------
@@ -145,8 +138,8 @@ void ofApp::draw(){
 	ofDrawLine((ofGetWidth() / 2), 0, (ofGetWidth() / 2), ofGetHeight());
 
 	// Will have to create variables for score that allow it to increment up
-	ofDrawBitmapString(ofToString(currentScore_2), 520, 25);
-	ofDrawBitmapString(ofToString(currentScore_1), 498, 25);
+	ofDrawBitmapString(ofToString(currentScore_2), ofGetWidth()/1.9, 25);
+	ofDrawBitmapString(ofToString(currentScore_1), ofGetWidth()/2.1, 25);
 	//ofDrawBitmapString(ofToString(i), 600, 100);
 
 	// RGB and Alpha is the last value
@@ -164,7 +157,7 @@ void ofApp::draw(){
 	ofDrawRectangle(Player_1);
 
 	ofRectangle Player_2;
-	Player_2.x = 995;
+	Player_2.x = ofGetWidth()/1;
 	Player_2.y = y2;
 	Player_2.width = 20;
 	Player_2.height = 80;
