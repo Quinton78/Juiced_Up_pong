@@ -29,12 +29,16 @@ void ofApp::setup(){
 	music.play();
 	music.setLoop(true);
 
+	font.load("CartoonCheck-Black.ttf", 32);
+	font2.load("CartoonCheck-Black.ttf", 100);
+
 	//shader.load("shaderBlurX");
 
 	gui.setup();
 
 	gui.add(buttonStart.setup("Start Game"));
 	gui.add(buttonQuit.setup("Quit Game"));
+	gui.add(buttonTitle.setup("Return to Title"));
 
 	// Removes insides
 	ofNoFill();
@@ -59,7 +63,7 @@ void ofApp::setup(){
 //--------------------------------------------------------------
 void ofApp::update(){
 
-	//if (Game == State) {}
+	if (State == Game) {
 		// In theory what should happen is that it delays ball movement for 5 seconds
 		for (int i = 5; i >= 0; --i) {
 			if (i == 0) {
@@ -71,8 +75,8 @@ void ofApp::update(){
 				// So point keep incrementing up while the game is supposed to be over
 				else if (currentScore_2 || currentScore_1 >= 11) {
 					speed = 0;
-					x = ofGetWidth()/2;
-					y = ofGetHeight()/2;
+					x = ofGetWidth() / 2;
+					y = ofGetHeight() / 2;
 				}
 			}
 		}
@@ -88,17 +92,21 @@ void ofApp::update(){
 			// Randomizes what direction the ball goes in when spawned into game world
 			xdir = ofLerp(-1, 1, glm::round(ofRandom(1)));
 			ydir = ofLerp(-1, 1, glm::round(ofRandom(1)));
+			ofRectangle Player_1;
+			Player_1.y = y1;
 		}
 
 		if (x <= radius) {
 			// Increase score count for P2 here
 			currentScore_2 = addScore_2 + currentScore_2;
 			// Resets position to the center of the screen
-			x = ofGetWidth()/2;
-			y = ofGetHeight()/2;
+			x = ofGetWidth() / 2;
+			y = ofGetHeight() / 2;
 			// Randomizes what direction the ball goes in when spawned into game world
 			xdir = ofLerp(-1, 1, glm::round(ofRandom(1)));
 			ydir = ofLerp(-1, 1, glm::round(ofRandom(1)));
+			ofRectangle Player_2;
+			Player_2.y = y2;
 		}
 
 		// Bouncing off the top and bottom of the screen
@@ -110,6 +118,7 @@ void ofApp::update(){
 		if (y <= radius) {
 			ydir = 1;
 		}
+	}
 }
 
 //--------------------------------------------------------------
@@ -121,7 +130,7 @@ void ofApp::draw(){
 	// Check for title screen state
 	// Display buttons and text here
 	if (State == Title) {
-		ofDrawBitmapString("PONG!", ofGetWidth() / 2, 384);
+		font.drawString("PONG!", ofGetWidth() / 2.25, 400);
 		// When buttons are pressed changes game states
 		if (buttonStart) {
 			State = Game;
@@ -165,22 +174,30 @@ void ofApp::draw(){
 	// Closes program when score reaches 11
 	// Note that a pop up will appear when this code runs
 	// Just click ignore and you can close it normally
-	if (currentScore_1 >= 11) {
+	if (currentScore_1 >= 1) {
 		State = End;
 		if (End == State) {
 			ofClear(0, 0, 0);
-			ofDrawBitmapString("GAME OVER!", ofGetWidth() / 2.145, 384);
-			ofDrawBitmapString("Player 1 Wins!", ofGetWidth() / 2.19, 420);
+			font.drawString("The Winner is...", ofGetWidth() / 2.6, 384);
+			font2.drawString("Player 1!", ofGetWidth() / 3.5, 550);
+			if (buttonTitle) {
+				State = Title;
+			}
+			gui.draw();
 		}
 	}
-	if (currentScore_2 >= 11) {
+	if (currentScore_2 >= 1) {
 		// Sets game state
 		State = End;
 		// Checks if game state is End
 		if (End == State) {
 			ofClear(0, 0, 0);
-			ofDrawBitmapString("GAME OVER!", ofGetWidth() / 2.145, 384);
-			ofDrawBitmapString("Player 2 Wins!", ofGetWidth() / 2.19, 420);
+			font.drawString("The Winner is...", ofGetWidth() / 2.6, 384);
+			font2.drawString("Player 2!", ofGetWidth() / 3.5, 550);
+			if (buttonTitle) {
+				State = Title;
+			}
+			gui.draw();
 		}
 	}
 	

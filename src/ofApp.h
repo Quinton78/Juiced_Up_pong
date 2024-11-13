@@ -32,6 +32,10 @@ class ofApp : public ofBaseApp{
 
 		ofxButton buttonStart;
 		ofxButton buttonQuit;
+		ofxButton buttonTitle;
+
+		ofTrueTypeFont font;
+		ofTrueTypeFont font2;
 		
 		// Shader variable
 		//ofShader shader;
