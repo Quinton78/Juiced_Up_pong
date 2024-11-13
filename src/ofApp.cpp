@@ -194,30 +194,33 @@ void ofApp::draw(){
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
-	if (key == '83') {
-		y1+=10;
-	}
+
 }
 
 void ofApp::keycodePressed(ofKeyEventArgs& e) {
 
-	cout << "KEY : " << e.key << endl;
+	// Displays keycode of input
+	// Useful for debugging
 	cout << "KEYCODE : " << e.keycode << endl;
-	cout << "MODIFIERS : " << e.modifiers << endl;
 
+	// Player 1 inputs
+	// Move down ('S')
 	if (e.keycode == 83) {
-		if (e.modifiers == 0) {
-			cout << "Plain old s\n";
-		}
-		else if (e.modifiers == OF_KEY_SHIFT) {
-			cout << "SHIFT-s\n";
-		}
-		else if (e.modifiers == OF_KEY_ALT) {
-			cout << "ALT-s\n";
-		}
-		else if (e.modifiers == OF_KEY_CONTROL) {
-			cout << "CTRL-s\n";
-		}
+		y1 += 10;
+	}
+	// Move up ('W')
+	if (e.keycode == 87) {
+		y1 -= 10;
+	}
+
+	// Player 2 inputs
+	// Move down ('Up_Arrow')
+	if (e.keycode == 264) {
+		y2 += 10;
+	}
+	// Move up ('Down_Arrow')
+	if (e.keycode == 265) {
+		y2 -= 10;
 	}
 }
 
