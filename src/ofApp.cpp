@@ -64,6 +64,7 @@ void ofApp::setup(){
 	ofAddListener(ofGetWindowPtr()->events().keyPressed, this,
 		&ofApp::keycodePressed);
 
+	startTimer = ofGetElapsedTimeMillis();	
 }
 
 //--------------------------------------------------------------
@@ -88,20 +89,19 @@ void ofApp::update(){
 	Player_2.height = 80;
 
 	if (Game == State) {
-		// In theory what should happen is that it delays ball movement for 5 seconds
-		for (int i = 5; i >= 0; --i) {
-			if (i == 0) {
-				if (currentScore_2 || currentScore_1 < 11) {
-					x += xdir * speed;
-					y += ydir * speed;
-				}
-				// Basically just here for edge cases where the game ends and screen is wiped but the ball is still moving
-				// Making it so points keep incrementing up while the game is supposed to be over
-				else if (currentScore_2 || currentScore_1 >= 11) {
-					speed = 0;
-					x = ofGetWidth() / 2;
-					y = ofGetHeight() / 2;
-				}
+		float timer = ofGetElapsedTimeMillis() - startTimer;
+		// After 2 seconds (or 200 milliseconds) the ball will start moving
+		if (timer >= 3000) {
+			if (currentScore_2 || currentScore_1 < 11) {
+				x += xdir * speed;
+				y += ydir * speed;
+			}
+			// Basically just here for edge cases where the game ends and screen is wiped but the ball is still moving
+			// Making it so points keep incrementing up while the game is supposed to be over
+			else if (currentScore_2 || currentScore_1 >= 11) {
+				speed = 0;
+				x = ofGetWidth() / 2;
+				y = ofGetHeight() / 2;
 			}
 		}
 		// Currently the ball bounces when is hits the left or right side of tthe screen
@@ -120,7 +120,7 @@ void ofApp::update(){
 			// Plays SFX 'Bell'
 			SFX_2.play();
 
-			// Attempting to reset play position here
+			// Resets players position
 			Player_1.y = y1 = 10;
 			Player_2.y = y2 = 10;
 		}
@@ -138,7 +138,7 @@ void ofApp::update(){
 			// Plays SFX 'Bell'
 			SFX_2.play();
 
-			// Attempting to reset player position here
+			// Resets players position
 			Player_1.y = y1 = 10;
 			Player_2.y = y2 = 10;
 		}
@@ -210,7 +210,7 @@ void ofApp::draw(){
 		ofDrawCircle(x, y, radius);
 
 		// This was to test for collision on the ball
-		//ofDrawRectangle(Player_1);
+		//ofDrawRectangle(collision);
 
 		// Creates rectangle for player 1
 		ofDrawRectangle(Player_1);

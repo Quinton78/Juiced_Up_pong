@@ -81,4 +81,7 @@ class ofApp : public ofBaseApp{
 		// Spawn positions for player 1 and 2
 		int y1 = 10;
 		int y2 = 10;
+
+		// Timer variable
+		float startTimer;
 };
