@@ -8,6 +8,7 @@ enum Pong {
 	Countdown,
 	End
 };
+// Starts game in Title screen state
 enum Pong State = Title;
 
 //--------------------------------------------------------------
@@ -58,7 +59,6 @@ void ofApp::setup(){
 	ofAddListener(ofGetWindowPtr()->events().keyPressed, this,
 		&ofApp::keycodePressed);
 
-	State = Title;
 }
 
 //--------------------------------------------------------------
@@ -73,7 +73,7 @@ void ofApp::update(){
 					y += ydir * speed;
 				}
 				// Basically just here for edge cases where the game ends and screen is wiped but the ball is still moving
-				// So point keep incrementing up while the game is supposed to be over
+				// Making it so points keep incrementing up while the game is supposed to be over
 				else if (currentScore_2 || currentScore_1 >= 11) {
 					speed = 0;
 					x = ofGetWidth() / 2;
@@ -94,7 +94,7 @@ void ofApp::update(){
 			xdir = ofLerp(-1, 1, glm::round(ofRandom(1)));
 			ydir = ofLerp(-1, 1, glm::round(ofRandom(1)));
 
-			// Plays SFX
+			// Plays SFX 'Bell'
 			SFX_2.play();
 
 			// Attempting to reset play position here
@@ -112,7 +112,7 @@ void ofApp::update(){
 			xdir = ofLerp(-1, 1, glm::round(ofRandom(1)));
 			ydir = ofLerp(-1, 1, glm::round(ofRandom(1)));
 			
-			// Plays SFX
+			// Plays SFX 'Bell'
 			SFX_2.play();
 
 			// Attempting to reset player position here
@@ -131,10 +131,11 @@ void ofApp::update(){
 		}
 
 		// Sound effects for result screen must be played in update in order to work properly
-		if (currentScore_1 >= 11) {
+		// Plays 'sploosh' when score increments up
+		if (currentScore_1 >= 1) {
 			SFX_1.play();
 		}
-		if (currentScore_2 >= 11) {
+		if (currentScore_2 >= 1) {
 			SFX_1.play();
 		}
 	}
@@ -169,14 +170,15 @@ void ofApp::draw(){
 		// Sets dividing line in the center of the screen
 		ofDrawLine((ofGetWidth() / 2), 0, (ofGetWidth() / 2), ofGetHeight());
 
-		// Will have to create variables for score that allow it to increment up
-		ofDrawBitmapString(ofToString(currentScore_2), ofGetWidth() / 1.9, 25);
-		ofDrawBitmapString(ofToString(currentScore_1), ofGetWidth() / 2.1, 25);
-		//ofDrawBitmapString(ofToString(i), 600, 100);
+		// Displays current score for player 1
+		ofDrawBitmapString(ofToString(currentScore_1), (ofGetWidth() / 2.1), 25);
+		// Displays current score for player 2
+		ofDrawBitmapString(ofToString(currentScore_2), (ofGetWidth() / 1.9), 25);
 
 		// Draws circle 
 		ofDrawCircle(x, y, radius);
 
+		// Creates rectangle for player 1
 		ofRectangle Player_1;
 		Player_1.x = 10;
 		Player_1.y = y1;
@@ -184,6 +186,7 @@ void ofApp::draw(){
 		Player_1.height = 80;
 		ofDrawRectangle(Player_1);
 
+		// Creates rectangle for player 2
 		ofRectangle Player_2;
 		Player_2.x = ofGetWidth() - 30;
 		Player_2.y = y2;
