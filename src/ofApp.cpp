@@ -64,6 +64,21 @@ void ofApp::setup(){
 //--------------------------------------------------------------
 void ofApp::update(){
 
+	collision.x = x - radius;
+	collision.y = y - radius;
+	collision.width = radius * 2;
+	collision.height = radius * 2;
+
+	Player_1.x = 10;
+	Player_1.y = y1;
+	Player_1.width = 20;
+	Player_1.height = 80;
+
+	Player_2.x = ofGetWidth() - 30;
+	Player_2.y = y2;
+	Player_2.width = 20;
+	Player_2.height = 80;
+
 	if (Game == State) {
 		// In theory what should happen is that it delays ball movement for 5 seconds
 		for (int i = 5; i >= 0; --i) {
@@ -96,11 +111,10 @@ void ofApp::update(){
 
 			// Plays SFX 'Bell'
 			SFX_2.play();
-			xdir = -1;
 
 			// Attempting to reset play position here
-			ofRectangle Player_1;
-			Player_1.y = y1;
+			//ofRectangle Player_1;
+			//Player_1.y = y1;
 		}
 
 		if (x <= radius) {
@@ -117,17 +131,17 @@ void ofApp::update(){
 			SFX_2.play();
 
 			// Attempting to reset player position here
-			ofRectangle Player_2;
-			Player_2.y = y2;
+			//ofRectangle Player_2;
+			//Player_2.y = y2;
 		}
 		// Right side
-		/*if (ofRectangle Player_1.x >= radius) {
-			xdir = -1;
+		if (Player_1.intersects(collision) == true) {
+			xdir = 1;
 		}
 		// Left side
-		if (ofRectangle Player_2.x <= radius) {
-			xdir = 1;
-		}*/
+		if (Player_2.intersects(collision) == true) {
+			xdir = -1;
+		}
 
 		// Bouncing off the top and bottom of the screen
 		// Bottom of the screen
@@ -184,23 +198,14 @@ void ofApp::draw(){
 		// Displays current score for player 2
 		ofDrawBitmapString(ofToString(currentScore_2), (ofGetWidth() / 1.9), 25);
 
-		// Draws circle 
+		// Draws circle
 		ofDrawCircle(x, y, radius);
+		ofDrawRectangle(collision);
 
 		// Creates rectangle for player 1
-		ofRectangle Player_1;
-		Player_1.x = 10;
-		Player_1.y = y1;
-		Player_1.width = 20;
-		Player_1.height = 80;
 		ofDrawRectangle(Player_1);
 
 		// Creates rectangle for player 2
-		ofRectangle Player_2;
-		Player_2.x = ofGetWidth() - 30;
-		Player_2.y = y2;
-		Player_2.width = 20;
-		Player_2.height = 80;
 		ofDrawRectangle(Player_2);
 	}
 

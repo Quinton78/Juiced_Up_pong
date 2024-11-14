@@ -47,6 +47,10 @@ class ofApp : public ofBaseApp{
 		ofSoundPlayer SFX_1;
 		ofSoundPlayer SFX_2;
 
+		ofRectangle collision;
+		ofRectangle Player_1;
+		ofRectangle Player_2;
+
 		int x;
 		int y;
 		int xdir = 1;
