@@ -82,7 +82,7 @@ void ofApp::update(){
 			}
 		}
 		// Currently the ball bounces when is hits the left or right side of tthe screen
-		// Since there is no player I'm keeping it this way for now aas it makes testing easier
+		// Since there is no player I'm keeping it this way for now as it makes testing easier
 		if (x >= ofGetWidth() - radius) {
 			// Increase score count for P1 here
 			// This is detecting the right side of the screen
@@ -96,6 +96,7 @@ void ofApp::update(){
 
 			// Plays SFX 'Bell'
 			SFX_2.play();
+			xdir = -1;
 
 			// Attempting to reset play position here
 			ofRectangle Player_1;
@@ -119,6 +120,14 @@ void ofApp::update(){
 			ofRectangle Player_2;
 			Player_2.y = y2;
 		}
+		// Right side
+		/*if (ofRectangle Player_1.x >= radius) {
+			xdir = -1;
+		}
+		// Left side
+		if (ofRectangle Player_2.x <= radius) {
+			xdir = 1;
+		}*/
 
 		// Bouncing off the top and bottom of the screen
 		// Bottom of the screen
@@ -132,10 +141,10 @@ void ofApp::update(){
 
 		// Sound effects for result screen must be played in update in order to work properly
 		// Plays 'sploosh' when score increments up
-		if (currentScore_1 >= 1) {
+		if (currentScore_1 >= 11) {
 			SFX_1.play();
 		}
-		if (currentScore_2 >= 1) {
+		if (currentScore_2 >= 11) {
 			SFX_1.play();
 		}
 	}
@@ -197,7 +206,7 @@ void ofApp::draw(){
 
 	// Closes program when score reaches 11
 	// Note that you can't replay the game but it does take you back to the title screen to exit the game
-	if (currentScore_1 >= 1) {
+	if (currentScore_1 >= 11) {
 		// Changes state
 		State = End;
 		// Checks if game state is End
@@ -216,7 +225,7 @@ void ofApp::draw(){
 			}
 		}
 	}
-	if (currentScore_2 >= 1) {
+	if (currentScore_2 >= 11) {
 		// Changes state
 		State = End;
 		// Checks if game state is End
