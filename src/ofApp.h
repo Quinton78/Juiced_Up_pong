@@ -44,7 +44,8 @@ class ofApp : public ofBaseApp{
 		ofSoundPlayer music;
 
 		// Audio variable for sound effects
-		ofSoundPlayer SFX;
+		ofSoundPlayer SFX_1;
+		ofSoundPlayer SFX_2;
 
 		int x;
 		int y;

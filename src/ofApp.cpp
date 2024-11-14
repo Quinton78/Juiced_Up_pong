@@ -29,6 +29,9 @@ void ofApp::setup(){
 	music.play();
 	music.setLoop(true);
 
+	SFX_1.load("Bell.mp3");
+	SFX_2.load("sploosh.mp3");
+
 	font.load("CartoonCheck-Black.ttf", 32);
 	font2.load("CartoonCheck-Black.ttf", 100);
 
@@ -38,7 +41,7 @@ void ofApp::setup(){
 
 	gui.add(buttonStart.setup("Start Game"));
 	gui.add(buttonQuit.setup("Quit Game"));
-	gui.add(buttonTitle.setup("Return to Title"));
+	//gui.add(buttonTitle.setup("Return to Title"));
 
 	// Removes insides
 	ofNoFill();
@@ -92,6 +95,11 @@ void ofApp::update(){
 			// Randomizes what direction the ball goes in when spawned into game world
 			xdir = ofLerp(-1, 1, glm::round(ofRandom(1)));
 			ydir = ofLerp(-1, 1, glm::round(ofRandom(1)));
+
+			// Plays SFX
+			SFX_2.play();
+
+			// Attempting to reset play position here
 			ofRectangle Player_1;
 			Player_1.y = y1;
 		}
@@ -105,6 +113,11 @@ void ofApp::update(){
 			// Randomizes what direction the ball goes in when spawned into game world
 			xdir = ofLerp(-1, 1, glm::round(ofRandom(1)));
 			ydir = ofLerp(-1, 1, glm::round(ofRandom(1)));
+			
+			// Plays SFX
+			SFX_2.play();
+
+			// Attempting to reset player position here
 			ofRectangle Player_2;
 			Player_2.y = y2;
 		}
@@ -117,6 +130,14 @@ void ofApp::update(){
 		// Top of the screen
 		if (y <= radius) {
 			ydir = 1;
+		}
+
+		// Sound effects for result screen must be played in update in order to work properly
+		if (currentScore_1 >= 11) {
+			SFX_1.play();
+		}
+		if (currentScore_2 >= 11) {
+			SFX_1.play();
 		}
 	}
 }
@@ -174,19 +195,15 @@ void ofApp::draw(){
 	// Closes program when score reaches 11
 	// Note that a pop up will appear when this code runs
 	// Just click ignore and you can close it normally
-	if (currentScore_1 >= 1) {
+	if (currentScore_1 >= 11) {
 		State = End;
 		if (End == State) {
 			ofClear(0, 0, 0);
 			font.drawString("The Winner is...", ofGetWidth() / 2.6, 384);
 			font2.drawString("Player 1!", ofGetWidth() / 3.5, 550);
-			if (buttonTitle) {
-				State = Title;
-			}
-			gui.draw();
 		}
 	}
-	if (currentScore_2 >= 1) {
+	if (currentScore_2 >= 11) {
 		// Sets game state
 		State = End;
 		// Checks if game state is End
@@ -194,10 +211,6 @@ void ofApp::draw(){
 			ofClear(0, 0, 0);
 			font.drawString("The Winner is...", ofGetWidth() / 2.6, 384);
 			font2.drawString("Player 2!", ofGetWidth() / 3.5, 550);
-			if (buttonTitle) {
-				State = Title;
-			}
-			gui.draw();
 		}
 	}
 	
