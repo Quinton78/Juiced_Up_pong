@@ -27,13 +27,17 @@ class ofApp : public ofBaseApp{
 		void keycodePressed(ofKeyEventArgs& e);
 		
 
-		// For future UI elements like the buttons
+		// Allows me to use gui features
 		ofxPanel gui;
 
+		// Butons for starting ans stopping the game
 		ofxButton buttonStart;
 		ofxButton buttonQuit;
+
+		// Using toggle over button here so that you don't have to hold down the button to keep the title screen open
 		ofxToggle titleScreen;
 
+		// Variables for my font
 		ofTrueTypeFont font;
 		ofTrueTypeFont font2;
 		
@@ -47,16 +51,24 @@ class ofApp : public ofBaseApp{
 		ofSoundPlayer SFX_1;
 		ofSoundPlayer SFX_2;
 
+		// Collisiosn for ball
 		ofRectangle collision;
+
+		// Rects for player 1 and 2
 		ofRectangle Player_1;
 		ofRectangle Player_2;
 
+		// Variables for position
 		int x;
 		int y;
+
+		// Variables for what direction the ball goes in
 		int xdir = 1;
 		int ydir = 1;
+
 		// Speed of the circle
-		int speed = 2;
+		int speed = 5;
+
 		// Determines radius of circle
 		int radius = 20;
 

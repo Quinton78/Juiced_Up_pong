@@ -25,19 +25,23 @@ void ofApp::setup(){
 	ofApp::addScore_2;
 	ofApp::currentScore_2;
 
+	// Plays background music
 	music.load("Leon.mp3");
 	music.setVolume(1.0f);
 	music.play();
 	music.setLoop(true);
 
+	// Loads in sound effects
 	SFX_1.load("Bell.mp3");
 	SFX_2.load("sploosh.mp3");
 
+	// Loads in font 2 different versions for different states
 	font.load("CartoonCheck-Black.ttf", 32);
 	font2.load("CartoonCheck-Black.ttf", 100);
 
 	//shader.load("shaderBlurX");
 
+	// Creates UI objects
 	gui.setup();
 	gui.add(buttonStart.setup("Start Game"));
 	gui.add(buttonQuit.setup("Quit Game"));
@@ -56,6 +60,7 @@ void ofApp::setup(){
 	xdir = ofLerp(-1, 1, glm::round(ofRandom(-1)));
 	ydir = ofLerp(-1, 1, glm::round(ofRandom(-1)));
 
+	// Listens to keyboard inputs
 	ofAddListener(ofGetWindowPtr()->events().keyPressed, this,
 		&ofApp::keycodePressed);
 
@@ -64,16 +69,19 @@ void ofApp::setup(){
 //--------------------------------------------------------------
 void ofApp::update(){
 
+	// Collision box for ball
 	collision.x = x - radius;
 	collision.y = y - radius;
 	collision.width = radius * 2;
 	collision.height = radius * 2;
 
+	// Player 1 collision and spawn
 	Player_1.x = 10;
 	Player_1.y = y1;
 	Player_1.width = 20;
 	Player_1.height = 80;
 
+	// Player 2 collision and spawn
 	Player_2.x = ofGetWidth() - 30;
 	Player_2.y = y2;
 	Player_2.width = 20;
@@ -113,8 +121,8 @@ void ofApp::update(){
 			SFX_2.play();
 
 			// Attempting to reset play position here
-			//ofRectangle Player_1;
-			//Player_1.y = y1;
+			Player_1.y = y1 = 10;
+			Player_2.y = y2 = 10;
 		}
 
 		if (x <= radius) {
@@ -131,8 +139,8 @@ void ofApp::update(){
 			SFX_2.play();
 
 			// Attempting to reset player position here
-			//ofRectangle Player_2;
-			//Player_2.y = y2;
+			Player_1.y = y1 = 10;
+			Player_2.y = y2 = 10;
 		}
 		// Right side
 		if (Player_1.intersects(collision) == true) {
@@ -200,7 +208,9 @@ void ofApp::draw(){
 
 		// Draws circle
 		ofDrawCircle(x, y, radius);
-		ofDrawRectangle(collision);
+
+		// This was to test for collision on the ball
+		//ofDrawRectangle(Player_1);
 
 		// Creates rectangle for player 1
 		ofDrawRectangle(Player_1);
