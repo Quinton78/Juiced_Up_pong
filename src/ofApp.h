@@ -40,9 +40,6 @@ class ofApp : public ofBaseApp{
 		// Variables for my font
 		ofTrueTypeFont font;
 		ofTrueTypeFont font2;
-		
-		// Shader variable
-		//ofShader shader;
 
 		// Audio variable for music
 		ofSoundPlayer music;

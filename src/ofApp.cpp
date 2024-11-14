@@ -14,12 +14,18 @@ enum Pong State = Title;
 //--------------------------------------------------------------
 void ofApp::setup(){
 
-	// Setting these variables these number spawns ball in the center of the screen
+	// Ball spawn location
 	ofApp::x = 512;
 	ofApp::y = 384;
+
+	// 'y' for player 1 and 2
 	ofApp::y1;
 	ofApp::y2;
+	
+	// Ball radius
 	ofApp::radius;
+	
+	// Variables for increasing the score
 	ofApp::addScore_1;
 	ofApp::currentScore_1;
 	ofApp::addScore_2;
@@ -38,8 +44,6 @@ void ofApp::setup(){
 	// Loads in font 2 different versions for different states
 	font.load("CartoonCheck-Black.ttf", 32);
 	font2.load("CartoonCheck-Black.ttf", 100);
-
-	//shader.load("shaderBlurX");
 
 	// Creates UI objects
 	gui.setup();
@@ -64,6 +68,7 @@ void ofApp::setup(){
 	ofAddListener(ofGetWindowPtr()->events().keyPressed, this,
 		&ofApp::keycodePressed);
 
+	// Establishes timer at the start of the game
 	startTimer = ofGetElapsedTimeMillis();	
 }
 
@@ -104,8 +109,8 @@ void ofApp::update(){
 				y = ofGetHeight() / 2;
 			}
 		}
-		// Currently the ball bounces when is hits the left or right side of tthe screen
-		// Since there is no player I'm keeping it this way for now as it makes testing easier
+		
+		// Checks if ball has reached the left side of the screen
 		if (x >= ofGetWidth() - radius) {
 			// Increase score count for P1 here
 			// This is detecting the right side of the screen
@@ -125,6 +130,7 @@ void ofApp::update(){
 			Player_2.y = y2 = 10;
 		}
 
+		// Checks if ball has reached the right side of the screen
 		if (x <= radius) {
 			// Increase score count for P2 here
 			currentScore_2 = addScore_2 + currentScore_2;
@@ -142,11 +148,13 @@ void ofApp::update(){
 			Player_1.y = y1 = 10;
 			Player_2.y = y2 = 10;
 		}
-		// Right side
+		// Left side
+		// If ball collides with player 1 it moves in the opposite direction
 		if (Player_1.intersects(collision) == true) {
 			xdir = 1;
 		}
-		// Left side
+		// Right side
+		// If ball collides with player 2 it moves in the opposite direction
 		if (Player_2.intersects(collision) == true) {
 			xdir = -1;
 		}
@@ -175,9 +183,6 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw(){
 
-	/*shader.begin();
-	shader.end();*/
-
 	// Check for title screen state
 	// Display buttons and text here
 	if (Title == State) {
@@ -194,7 +199,6 @@ void ofApp::draw(){
 		gui.draw();
 	}
 	if (Game == State) {
-		// Put everything that needs to be drawn here
 		// If not set, defaults to a thickness of 1.
 		ofSetLineWidth(5);
 
@@ -219,7 +223,6 @@ void ofApp::draw(){
 		ofDrawRectangle(Player_2);
 	}
 
-	// Closes program when score reaches 11
 	// Note that you can't replay the game but it does take you back to the title screen to exit the game
 	if (currentScore_1 >= 11) {
 		// Changes state
@@ -240,6 +243,8 @@ void ofApp::draw(){
 			}
 		}
 	}
+
+	// Note that you can't replay the game but it does take you back to the title screen to exit the game
 	if (currentScore_2 >= 11) {
 		// Changes state
 		State = End;
