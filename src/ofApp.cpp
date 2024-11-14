@@ -38,10 +38,9 @@ void ofApp::setup(){
 	//shader.load("shaderBlurX");
 
 	gui.setup();
-
 	gui.add(buttonStart.setup("Start Game"));
 	gui.add(buttonQuit.setup("Quit Game"));
-	//gui.add(buttonTitle.setup("Return to Title"));
+	gui.add(titleScreen.setup("Return to title", false));
 
 	// Removes insides
 	ofNoFill();
@@ -60,13 +59,12 @@ void ofApp::setup(){
 		&ofApp::keycodePressed);
 
 	State = Title;
-
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
 
-	if (State == Game) {
+	if (Game == State) {
 		// In theory what should happen is that it delays ball movement for 5 seconds
 		for (int i = 5; i >= 0; --i) {
 			if (i == 0) {
@@ -150,18 +148,20 @@ void ofApp::draw(){
 
 	// Check for title screen state
 	// Display buttons and text here
-	if (State == Title) {
+	if (Title == State) {
 		font.drawString("PONG!", ofGetWidth() / 2.25, 400);
 		// When buttons are pressed changes game states
 		if (buttonStart) {
 			State = Game;
 		}
+		// Note that a pop up will appear when this code runs
+		// Just click ignore and you can close it normally
 		if (buttonQuit) {
 			terminate();
 		}
 		gui.draw();
 	}
-	if (State == Game) {
+	if (Game == State) {
 		// Put everything that needs to be drawn here
 		// If not set, defaults to a thickness of 1.
 		ofSetLineWidth(5);
@@ -193,24 +193,43 @@ void ofApp::draw(){
 	}
 
 	// Closes program when score reaches 11
-	// Note that a pop up will appear when this code runs
-	// Just click ignore and you can close it normally
-	if (currentScore_1 >= 11) {
-		State = End;
-		if (End == State) {
-			ofClear(0, 0, 0);
-			font.drawString("The Winner is...", ofGetWidth() / 2.6, 384);
-			font2.drawString("Player 1!", ofGetWidth() / 3.5, 550);
-		}
-	}
-	if (currentScore_2 >= 11) {
-		// Sets game state
+	// Note that you can't replay the game but it does take you back to the title screen to exit the game
+	if (currentScore_1 >= 1) {
+		// Changes state
 		State = End;
 		// Checks if game state is End
 		if (End == State) {
+			// Displays winner text
+			ofClear(0, 0, 0);
+			font.drawString("The Winner is...", ofGetWidth() / 2.6, 384);
+			font2.drawString("Player 1!", ofGetWidth() / 3.5, 550);
+			gui.draw();
+			// Takes you back to title screen
+			if (titleScreen == true) {
+				ofClear(0, 0, 0);
+				font.drawString("PONG!", ofGetWidth() / 2.25, 400);
+				gui.draw();
+				State = Title;
+			}
+		}
+	}
+	if (currentScore_2 >= 1) {
+		// Changes state
+		State = End;
+		// Checks if game state is End
+		if (End == State) {
+			// Displays winner text
 			ofClear(0, 0, 0);
 			font.drawString("The Winner is...", ofGetWidth() / 2.6, 384);
 			font2.drawString("Player 2!", ofGetWidth() / 3.5, 550);
+			gui.draw();
+			// Takes you back to title screen
+			if (titleScreen == true) {
+				ofClear(0, 0, 0);
+				font.drawString("PONG!", ofGetWidth() / 2.25, 400);
+				gui.draw();
+				State = Title;
+			}
 		}
 	}
 	

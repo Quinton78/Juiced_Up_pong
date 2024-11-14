@@ -32,7 +32,7 @@ class ofApp : public ofBaseApp{
 
 		ofxButton buttonStart;
 		ofxButton buttonQuit;
-		ofxButton buttonTitle;
+		ofxToggle titleScreen;
 
 		ofTrueTypeFont font;
 		ofTrueTypeFont font2;
